@@ -658,13 +658,14 @@ footer {
     left: 0px;
     top: 0px;
     z-index: 2;
+    transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .backdrop.is-hidden{
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    display: none;
+    /* display: none; */
   }
 
   .modal  {
@@ -712,9 +713,13 @@ footer {
     padding-left: 40px;
   }
 
+  .modal_input:hover + .modal_svg,
+  .modal_input:focus + .modal_svg{
+    fill: var(--accent-color-hover);
+  }
+
   .modal_input:hover, .modal_input:focus {
     border: 1px solid var(--accent-color-hover);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .container_modal{
@@ -752,10 +757,6 @@ footer {
     fill: var(--primary-black-color);
   }
 
-  .modal_svg:hover{
-    fill: var(--accent-color-hover);
-  }
-
   .modal_svg_checked{
     overflow: hidden;
     position: absolute;
@@ -769,7 +770,6 @@ footer {
   .modal_svg_checked:hover{
     fill: var(--accent-color-hover);
   }
-
 
  .container_modal_comments{
   position: relative;
