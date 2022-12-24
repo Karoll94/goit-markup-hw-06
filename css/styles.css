@@ -652,7 +652,7 @@ footer {
 
   .backdrop{
     background: rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     left: 0px;
@@ -715,7 +715,7 @@ footer {
 
   .modal_input:hover + .modal_svg,
   .modal_input:focus + .modal_svg{
-    fill: var(--accent-color-hover);
+    fill: var(--accent-color-hover);    
   }
 
   .modal_input:hover, .modal_input:focus {
